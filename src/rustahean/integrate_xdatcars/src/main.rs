@@ -1,13 +1,13 @@
+/*
+runvaspを実行したディレクトリのパスをargsで与える
+その下にあるXDATCARを連結して,vasp_dirにXDATCARとして出力
+ */
+
 extern crate glob;
 use glob::glob;
 use std::env;
 use std::fs::File;
 use std::io::{self, Read, Write};
-
-/*
-dir argsを与えて、その下にあるXDATCARを連結して,
-vasp_dirにMD.posとして出力
- */
 
  fn main() -> io::Result<()> {
     let args: Vec<String> = env::args().collect();

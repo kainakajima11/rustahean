@@ -1,7 +1,3 @@
-use std::fs;
-use std::env;
-use std::path::Path;
-
 /*
 OOO_0, OOO_1, ... みたいなディレクトリがあって、OOOをXXXに変えたいときに使える。
 （runvasp.pyで作ったデータディレクトリの名前を一括で変更するために作りました。）
@@ -10,6 +6,10 @@ OOO_0, OOO_1, ... みたいなディレクトリがあって、OOOをXXXに変�
 第三引数に新しいデータディレクトリの名前, required
 第四引数に数字をいくつずらすか, optional
 */
+
+use std::fs;
+use std::env;
+use std::path::Path;
 
 fn main() {
     let args: Vec<String> = env::args().collect();

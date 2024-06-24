@@ -1,7 +1,3 @@
-use std::fs;
-use std::env;
-use std::io::{BufReader, BufWriter, BufRead, Write};
-
 /*
 ovitoでのDXAで出力したステップごとの転位長さファイルを
 pd.read_csv(
@@ -14,6 +10,9 @@ pd.read_csv(
 第3引数 : 出力される新しいファイルの名前（第1引数/第3引数)の場所に作られる。
 */
 
+use std::fs;
+use std::env;
+use std::io::{BufReader, BufWriter, BufRead, Write};
 
 fn main() {
     let a = Args::new(&env::args().collect());
